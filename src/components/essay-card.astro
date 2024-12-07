@@ -1,0 +1,11 @@
+---
+const data = Astro.props;
+const { title, source, description, date } = data;
+// essay card component that appears on the home page
+---
+  <div class="essay-card">
+    <!-- essay-____-${source} is to pervent transition:name collisions so the viewtransition api can animate elements between page transitions -->
+    <h2 transition:name=`essay-title-${source}`><a href={source}>{title}</a></h2>
+    <p transition:name=`essay-first-para-${source}`>{description}</p>
+    <p transition:name=`essay-date-${source}` class="subnote date-card">{date}</p>
+  </div>

@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import EssayCard from '../components/essay-card.astro';
+---
+
+<Layout title="Home Page">
+		<h1>Archive of Essays</h1>
+		<div class="essays">
+			<EssayCard title="Culture and Commuinications Midterm Essays" description="Gregory Bateson believed that ecosystems and human biology don&#39t exist on the event level, it&#39s only through ..." source="cult-and-comms-midterm" date="2021/08/03" />
+			<EssayCard title="Reading Popular Culture - Reflective Paper 1" description="Jungen's work Cetology (2002) allows for recontextualization of American cultural items, when viewed ..." source="pop-cult-rp-1" date="2024/10/04" />
+		</div>
+		<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+</Layout>
