@@ -1,0 +1,71 @@
+
+/* navigation bar styling */
+.nav {
+  display: flex;
+  align-items: flex-end;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: #151515;
+  width: 100%;
+  padding-block: 1rem;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  /* believe tufte css was adding a margin top to all li if not first child the selector specificity was decently complex so I used important normally I wouldn't */
+  margin-top: 0rem !important; 
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* styling for the first letter of paragraphs following h2 and h3 in articles */
+article h2 + p::first-letter, 
+article h3 + p::first-letter {
+  float: left;
+  font-size: 3.75rem;
+  line-height: 1;
+  padding-right: 0.5rem;
+  padding-top: 0.2rem;
+  font-weight: bold;
+}
+
+/* essay card styling */
+.essay-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0.5rem;
+  max-width: 80ch;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* date card styling */
+.date-card {
+  margin-top: auto; /* push to bottom */
+  padding-top: 0.5rem;
+  position: relative;
+  bottom: 0;
+}
+
+/* Grid layout for essays */
+.essays {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* min width of 300px and max width of 1fr */
+}
